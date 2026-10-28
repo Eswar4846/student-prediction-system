@@ -1,0 +1,58 @@
+{
+  "dataset_source": "UCI Machine Learning Repository \u2014 Student Performance Dataset",
+  "dataset_url": "https://archive.ics.uci.edu/dataset/320/student+performance",
+  "target_column": "G3",
+  "target_scale": "0 to 20 (Portuguese grading scale)",
+  "best_model": "Random Forest",
+  "selection_criterion": "Lowest test-set MAE",
+  "all_results": {
+    "Linear Regression": {
+      "MAE": 1.5729,
+      "RMSE": 2.3083,
+      "R2": 0.7401
+    },
+    "Decision Tree": {
+      "MAE": 1.2732,
+      "RMSE": 2.2495,
+      "R2": 0.7532
+    },
+    "Random Forest": {
+      "MAE": 1.1056,
+      "RMSE": 1.7939,
+      "R2": 0.8431
+    }
+  },
+  "features": [
+    "G1",
+    "G2",
+    "studytime",
+    "failures",
+    "absences",
+    "sex",
+    "age",
+    "address",
+    "famsize",
+    "Medu",
+    "Fedu",
+    "Mjob",
+    "Fjob",
+    "schoolsup",
+    "famsup",
+    "paid",
+    "activities",
+    "higher",
+    "internet",
+    "romantic",
+    "famrel",
+    "freetime",
+    "goout",
+    "Dalc",
+    "Walc",
+    "health",
+    "traveltime"
+  ],
+  "num_training_samples": 395,
+  "test_size": 0.2,
+  "random_seed": 42,
+  "note_on_g1_g2": "G1 and G2 are first and second period grades. They are used as features because they precede G3 in time. This is NOT data leakage \u2014 it simulates predicting the final grade based on earlier exam performance within the same school year."
+}
